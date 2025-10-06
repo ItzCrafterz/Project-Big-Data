@@ -4,8 +4,6 @@
 
 **Gilang Gallan Indrana - 5024231030**
 
-[📊 Demo Dashboard](#demo) • [🚀 Quick Start](#quick-start) • [📖 Dokumentasi](#dokumentasi) • [🎯 Fitur](#fitur-utama)
-
 <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/preview.png" width="800" alt="Dashboard Preview">
 
 </div>
@@ -39,15 +37,6 @@ Naturalisasi pemain sepak bola merupakan isu yang kontroversial di Indonesia. Pr
 - ✅ Mengidentifikasi tren sentimen dari waktu ke waktu
 - ✅ Membandingkan perbedaan opini di berbagai platform media
 - ✅ Memberikan insight untuk stakeholder terkait
-
-### 🎓 Informasi Akademik
-
-- **Nama:** Gilang Gallan Indrana
-- **NRP:** 5024231030
-- **Program:** Big Data Analytics
-- **Tahun:** 2024
-
----
 
 ## ✨ Fitur Utama
 
@@ -395,7 +384,5 @@ sentiment-timnas-indonesia/
 └── 📂 models/
     └── (IndoBERT models auto-downloaded di ~/.cache/huggingface/)
 ```
-
-🇮🇩 **Indonesia Jaya!** 🇮🇩
-
 </div>
+
