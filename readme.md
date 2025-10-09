@@ -36,7 +36,7 @@ Proyek ini menganalisis **sentimen publik Indonesia** terhadap kebijakan **natur
 | **NLP** | Sastrawi, NLTK |
 | **Data Science** | Pandas, NumPy, Scikit-learn |
 | **Visualization** | Streamlit, Plotly, Matplotlib, WordCloud |
-| **Database** | MySQL (Optional) |
+| **Database** | CSV |
 
 ---
 
@@ -413,4 +413,5 @@ output/
 *© 2024 Gilang Gallan Indrana - 5024231030*
 
 </div>
+
 
