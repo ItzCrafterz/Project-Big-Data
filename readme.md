@@ -9,7 +9,7 @@
 
 **Gilang Gallan Indrana - 5024231030**
 
-*Proyek Big Data Analytics - Analisis Sentimen Menggunakan Deep Learning*
+*Kecerdasan Web dan Big Data*
 
 </div>
 
@@ -27,7 +27,7 @@ Proyek ini menganalisis **sentimen publik Indonesia** terhadap kebijakan **natur
 
 ---
 
-## 🛠️ Teknologi
+## 🛠️ Tools
 
 | Kategori | Teknologi |
 |----------|-----------|
@@ -408,8 +408,9 @@ output/
 
 **⚽ Made with ❤️ for Indonesian Football ⚽**
 
-*Proyek Big Data Analytics - Institut Teknologi Sepuluh Nopember (ITS)*
+*Proyek Kecerdasan Web dan Big Data - Institut Teknologi Sepuluh Nopember (ITS)*
 
 *© 2024 Gilang Gallan Indrana - 5024231030*
 
 </div>
+
