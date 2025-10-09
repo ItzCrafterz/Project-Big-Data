@@ -1,227 +1,235 @@
-# 🇮🇩 Sentimen Analisis Naturalisasi Timnas Indonesia
+# 🇮🇩 Analisis Sentimen Naturalisasi Pemain Timnas Indonesia
 
 <div align="center">
 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![IndoBERT](https://img.shields.io/badge/Model-IndoBERT-green.svg)](https://huggingface.co/indobenchmark/indobert-base-p1)
+[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red.svg)](https://streamlit.io/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **Gilang Gallan Indrana - 5024231030**
 
-<img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/preview.png" width="800" alt="Dashboard Preview">
+*Proyek Big Data Analytics - Analisis Sentimen Menggunakan Deep Learning*
 
 </div>
 
 ---
 
-## 📋 Daftar Isi
+## 📋 Tentang Proyek
 
-- [Tentang Proyek](#tentang-proyek)
-- [Fitur Utama](#fitur-utama)
-- [Teknologi](#teknologi)
-- [Quick Start](#quick-start)
-- [Arsitektur Sistem](#arsitektur-sistem)
-- [Dataset](#dataset)
-- [Model & Metodologi](#model--metodologi)
-- [Hasil & Visualisasi](#hasil--visualisasi)
-- [Kontribusi](#kontribusi)
-- [Lisensi](#lisensi)
-- [Kontak](#kontak)
+Proyek ini menganalisis **sentimen publik Indonesia** terhadap kebijakan **naturalisasi pemain asing** untuk Tim Nasional Sepak Bola Indonesia menggunakan model **IndoBERT** (Indonesian BERT Transformer).
 
----
-
-## 🎯 Tentang Proyek
-
-Proyek ini menganalisis sentimen opini publik Indonesia terhadap kebijakan **naturalisasi pemain asing** untuk Tim Nasional Sepak Bola Indonesia. Dengan menggunakan **IndoBERT** (Indonesian BERT Transformer), sistem ini mampu mengklasifikasikan sentimen dengan akurasi tinggi dari berbagai sumber data online.
-
-### 🔍 Latar Belakang
-
-Naturalisasi pemain sepak bola merupakan isu yang kontroversial di Indonesia. Proyek ini bertujuan untuk:
+### 🎯 Tujuan
 - ✅ Memahami opini publik secara objektif dan terukur
-- ✅ Mengidentifikasi tren sentimen dari waktu ke waktu
-- ✅ Membandingkan perbedaan opini di berbagai platform media
+- ✅ Mengidentifikasi tren sentimen dari berbagai platform media
 - ✅ Memberikan insight untuk stakeholder terkait
-
-## ✨ Fitur Utama
-
-### 🤖 Analisis Sentimen dengan IndoBERT
-- Model: `w11wo/indonesian-roberta-base-sentiment-classifier`
-- Akurasi: **85-92%** (jauh lebih tinggi dari lexicon-based 60-70%)
-- Klasifikasi: Positif (Setuju), Negatif (Tidak Setuju), Netral
-- Context-aware: Memahami sarkasme dan konteks kalimat
-
-### 📊 Interactive Dashboard
-- **Real-time filtering**: Filter by source, sentiment, date
-- **5 Tab Visualisasi:**
-  1. 📊 Distribusi Opini (Pie Chart)
-  2. 📈 Tren Waktu (Line Chart)
-  3. ⚖️ Perbandingan Berita vs YouTube
-  4. ☁️ Word Clouds (Positif & Negatif)
-  5. 📋 Data Explorer (Search & Download)
-
-### 🔄 Multi-Source Data Crawling
-- **Google News**: Portal berita Indonesia
-- **YouTube**: Komentar video terkait Timnas
-- **Auto-filtering**: Hanya data relevan Timnas Indonesia
-- **Duplicate removal**: Advanced deduplication
-
-### 🎨 UI/UX Modern
-- **Tema Merah Putih Indonesia** 🇮🇩
-- **Responsive Design**: Mobile & Desktop friendly
-- **High Contrast Colors**: Aksesibilitas tinggi
-- **Smooth Animations**: User experience optimal
+- ✅ Membandingkan sentimen antara portal berita dan YouTube
 
 ---
 
-## 🛠 Teknologi
+## 🛠️ Teknologi
 
-### Core Technologies
-
-| Kategori | Technology | Versi | Keterangan |
-|----------|-----------|-------|------------|
-| **Deep Learning** | PyTorch | 2.0+ | Deep learning framework |
-| | Transformers | 4.30+ | Hugging Face library |
-| | IndoBERT | RoBERTa | Pretrained Indonesian model |
-| **Web Scraping** | GoogleNews | 1.6.13 | News crawler |
-| | YouTube Data API | v3 | Comment scraper |
-| **NLP** | Sastrawi | 1.0.1 | Indonesian stemmer |
-| | NLTK | 3.8.1 | Text processing |
-| **Data Science** | Pandas | 2.1.4 | Data manipulation |
-| | NumPy | 1.26.2 | Numerical computing |
-| | Scikit-learn | 1.3.2 | ML utilities |
-| **Visualization** | Streamlit | 1.28+ | Interactive dashboard |
-| | Plotly | 5.17+ | Interactive charts |
-| | Matplotlib | 3.8.2 | Static plots |
-| | Seaborn | 0.13.0 | Statistical viz |
-| | WordCloud | 1.9.3 | Word cloud generation |
-| **Database** | MySQL | 8.0+ | Data storage |
-| | mysql-connector | 8.0.33 | Python MySQL driver |
-
-### System Requirements
-
-- **Python:** 3.8 atau lebih tinggi
-- **RAM:** Minimal 4GB (8GB recommended untuk IndoBERT)
-- **Storage:** 2GB (untuk model IndoBERT)
-- **GPU:** Opsional (mempercepat 10-50x)
+| Kategori | Teknologi |
+|----------|-----------|
+| **Deep Learning** | PyTorch, Transformers, IndoBERT |
+| **Web Scraping** | GoogleNews, YouTube Data API |
+| **NLP** | Sastrawi, NLTK |
+| **Data Science** | Pandas, NumPy, Scikit-learn |
+| **Visualization** | Streamlit, Plotly, Matplotlib, WordCloud |
+| **Database** | MySQL (Optional) |
 
 ---
 
-## 🚀 Quick Start
+## 📊 Hasil Analisis
 
-### 1. Clone Repository
+### Distribusi Opini Masyarakat
 
-```bash
-git clone https://github.com/yourusername/sentiment-timnas-indonesia.git
-cd sentiment-timnas-indonesia
-```
+<div align="center">
 
-### 2. Setup Virtual Environment
+Berdasarkan analisis terhadap **3.710 data** (544 berita + 3.166 komentar YouTube), sentimen masyarakat menunjukkan kecenderungan **NEGATIF/TIDAK SETUJU** dengan persentase sebagai berikut:
 
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
+**✅ Setuju (Mendukung)**: 1.199 (32,3%)
+**❌ Tidak Setuju (Menolak)**: 1.453 (39,2%)  
+**😐 Netral**: 1.058 (28,5%)
 
-# Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
-```
 
-### 3. Install Dependencies
+**Kesimpulan:** Mayoritas masyarakat cenderung menolak atau ragu terhadap naturalisasi pemain timnas, dengan selisih 6,8% antara yang tidak setuju dan setuju.
 
-```bash
-pip install -r requirements.txt
-```
+</div>
 
-### 4. Download NLTK Data
+![Distribusi Opini](ProjectBigData/output/opinion_distribution.png)
 
-```bash
-python download_nltk_data.py
-```
-
-### 5. Konfigurasi API Keys
-
-Edit file `config.py`:
-
-```python
-# YouTube API Key (dapatkan dari Google Cloud Console)
-YOUTUBE_API_KEY = "YOUR_API_KEY_HERE"
-
-# Search Keywords (opsional, sudah ada default)
-SEARCH_KEYWORDS = [
-    "naturalisasi pemain timnas indonesia",
-    # ... keywords lainnya
-]
-```
-
-### 6. Setup Database (Opsional)
-
-```bash
-# Jalankan MySQL server (XAMPP/MAMP)
-# Import database schema
-mysql -u root < database_schema.sql
-```
-
-### 7. Jalankan Crawling & Analisis
-
-```bash
-python main.py
-```
-
-**Note:** Proses pertama kali akan download model IndoBERT (~500MB)
-
-### 8. Jalankan Dashboard
-
-```bash
-streamlit run app.py
-```
-
-Dashboard akan terbuka di: `http://localhost:8501`
+> **📊 Penjelasan Grafik:** Diagram pie ini menunjukkan proporsi opini masyarakat. Warna hijau = setuju, merah = tidak setuju, abu-abu = netral. Ukuran slice menunjukkan persentase masing-masing kategori.
 
 ---
 
-## 🏗 Arsitektur Sistem
+### 📈 Distribusi Sentimen Detail
+
+Distribusi lengkap sentimen dari seluruh data:
+- **Positif**: 1.199 data (32,3%) - mendukung naturalisasi
+- **Negatif**: 1.453 data (39,2%) - menolak naturalisasi
+- **Netral**: 1.058 data (28,5%) - tidak berpihak
+
+![Distribusi Sentimen](ProjectBigData/output/sentiment_distribution.png)
+
+> **📊 Penjelasan Grafik:** Bar chart menampilkan jumlah absolut dan persentase setiap kategori sentimen. Tinggi batang = jumlah data, label di atas batang = jumlah dan persentase.
+
+---
+
+### ⚖️ Perbandingan Platform: Berita vs YouTube
+
+<div align="center">
+
+| Platform | Total Data | Setuju | Tidak Setuju | Netral | Sentimen Dominan |
+|----------|------------|--------|--------------|--------|------------------|
+| **Portal Berita** | 544 | 94 (17,3%) | 14 (2,6%) | 436 (80,1%) | **Netral** |
+| **YouTube** | 3.166 | 1.105 (34,9%) | 1.439 (45,5%) | 622 (19,6%) | **Negatif** |
+
+**Insight:** YouTube lebih positif 17,6% dibanding berita untuk opini setuju, namun juga lebih negatif 42,9% untuk opini tidak setuju. Portal berita cenderung objektif/netral, sedangkan YouTube lebih emosional dan terpolarisasi.
+
+</div>
+
+![Perbandingan Bar](ProjectBigData/output/comparison_bar_chart.png)
+
+> **📊 Penjelasan Grafik:** Grafik batang kelompok membandingkan jumlah sentimen antara News, YouTube, dan Gabungan. Setiap kategori memiliki 3 batang (Positif=hijau, Negatif=merah, Netral=abu-abu).
+
+![Perbandingan Pie](ProjectBigData/output/comparison_pie_charts.png)
+
+> **📊 Penjelasan Grafik:** Tiga diagram pie berdampingan menunjukkan distribusi opini untuk News (kiri), YouTube (tengah), dan Gabungan (kanan). Memudahkan perbandingan visual antar platform.
+
+![Perbandingan Persentase](ProjectBigData/output/comparison_percentage.png)
+
+> **📊 Penjelasan Grafik:** Stacked bar chart (batang bertumpuk) menampilkan komposisi persentase sentimen. Total setiap batang = 100%, dengan segmen berwarna menunjukkan proporsi masing-masing sentimen.
+
+---
+
+### 📉 Tren Sentimen Over Time
+
+![Tren Sentimen](ProjectBigData/output/sentiment_trend.png)
+
+> **📊 Penjelasan Grafik:** Line chart menampilkan perubahan jumlah sentimen dari waktu ke waktu. Garis hijau = positif, merah = negatif, biru = netral. Titik data menunjukkan jumlah artikel/komentar per tanggal. Grafik ini membantu melihat kapan sentimen naik/turun dan mengidentifikasi event tertentu yang mempengaruhi opini publik.
+
+---
+
+### ☁️ Word Clouds - Kata-kata Populer
+
+<div align="center">
+
+**Kata-kata yang Sering Muncul pada Sentimen Positif**
+
+![Word Cloud Positif](ProjectBigData/output/wordcloud_positif.png)
+
+> **📊 Penjelasan:** Word cloud dengan warna hijau menampilkan kata-kata yang paling sering muncul dalam komentar/berita positif. Semakin besar ukuran kata = semakin sering muncul. Contoh kata: "dukung", "bagus", "kuat", "prestasi", "tingkat", dll.
+
+---
+
+**Kata-kata yang Sering Muncul pada Sentimen Negatif**
+
+![Word Cloud Negatif](ProjectBigData/output/wordcloud_negatif.png)
+
+> **📊 Penjelasan:** Word cloud dengan warna merah menampilkan kata-kata yang paling sering muncul dalam komentar/berita negatif. Kata-kata seperti "tolak", "kontra", "lemah", "gagal", "masalah" mendominasi, menunjukkan kekhawatiran masyarakat.
+
+</div>
+
+---
+
+### 📰 Distribusi Sentimen Berdasarkan Sumber Media
+
+![Sentimen per Sumber](ProjectBigData/output/sentiment_by_source.png)
+
+> **📊 Penjelasan Grafik:** Horizontal bar chart menampilkan top 10 sumber berita/platform dengan jumlah data terbanyak. Setiap sumber memiliki 3 batang berwarna (hijau=positif, abu=netral, merah=negatif). Grafik ini membantu mengidentifikasi media mana yang paling banyak memberitakan isu naturalisasi dan kecenderungan sentimen masing-masing media.
+
+---
+
+## 🔍 Insight Utama
+
+### 📊 Temuan Penting
+
+1. **Sentimen Dominan: NEGATIF**
+   - Selisih 6,8% antara yang menolak (39,2%) vs mendukung (32,3%)
+   - Opini publik terpolarisasi dan masih bisa berubah
+
+2. **Perbedaan Platform**
+   - **Portal Berita**: Lebih netral (80,1%), cenderung objektif
+   - **YouTube**: Lebih emosional, 45,5% menolak vs 34,9% setuju
+   - YouTube 17,6% lebih positif dibanding berita dalam opini setuju
+
+3. **Prediksi Tren Masa Depan**
+   - Sentimen negatif sedikit lebih unggul
+   - Opini masih terpolarisasi, bisa berubah tergantung perkembangan
+   - Diperlukan evaluasi dan komunikasi lebih baik dari stakeholder
+
+---
+
+## 📁 Struktur Proyek
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    DATA COLLECTION                          │
-├─────────────────────────────────────────────────────────────┤
-│  Google News API  │  YouTube Data API  │  (Twitter - TBD)  │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   DATA CLEANING                             │
-├─────────────────────────────────────────────────────────────┤
-│  • Remove Duplicates  • Filter Spam  • Validate Length     │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│                 TEXT PREPROCESSING                          │
-├─────────────────────────────────────────────────────────────┤
-│  • Case Folding  • Remove URL/Mention  • Stopword Removal  │
-│  • Stemming (Sastrawi)  • Tokenization                     │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│              SENTIMENT ANALYSIS (IndoBERT)                  │
-├─────────────────────────────────────────────────────────────┤
-│  Model: w11wo/indonesian-roberta-base-sentiment-classifier │
-│  Output: Positif (Setuju) / Negatif (Tidak Setuju) / Netral│
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   DATA STORAGE                              │
-├─────────────────────────────────────────────────────────────┤
-│  CSV Files  │  MySQL Database  │  JSON Export              │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│              VISUALIZATION & DASHBOARD                      │
-├─────────────────────────────────────────────────────────────┤
-│  Streamlit Dashboard  │  Plotly Charts  │  Word Clouds     │
-└─────────────────────────────────────────────────────────────┘
+ProjectBigData/
+│
+├── 📄 main.py                      # Main execution script
+├── 📄 app.py                       # Streamlit dashboard
+├── 📄 config.py                    # Configuration & settings
+├── 📄 requirements.txt             # Python dependencies
+├── 📄 README.md                    # Project documentation
+├── 📄 database_schema.sql          # MySQL schema (optional)
+│
+├── 📄 news_crawler.py              # Google News crawler
+├── 📄 youtube_scraper.py           # YouTube comment scraper
+├── 📄 text_preprocessor.py         # Text cleaning & processing
+├── 📄 indobert_analyzer.py         # IndoBERT sentiment analyzer
+├── 📄 data_cleaner.py              # Data quality control
+├── 📄 visualizer.py                # Chart generation
+├── 📄 comparison_analyzer.py       # Platform comparison
+├── 📄 mysql_integration.py         # Database operations (optional)
+├── 📄 download_nltk_data.py        # NLTK data downloader
+│
+├── 📂 data/
+│   ├── 📄 raw_data.csv             # Raw crawled data (combined)
+│   ├── 📄 processed_data.csv       # Cleaned & analyzed data
+│   ├── 📄 raw_news.csv             # News articles only
+│   ├── 📄 raw_youtube.csv          # YouTube comments only
+│   └── 📄 comparison_summary.csv   # Comparison statistics
+│
+└── 📂 output/
+    ├── 🖼️ opinion_distribution.png
+    ├── 🖼️ sentiment_distribution.png
+    ├── 🖼️ sentiment_by_source.png
+    ├── 🖼️ sentiment_trend.png
+    ├── 🖼️ comparison_bar_chart.png
+    ├── 🖼️ comparison_pie_charts.png
+    ├── 🖼️ comparison_percentage.png
+    ├── 🖼️ wordcloud_positif.png
+    └── 🖼️ wordcloud_negatif.png
 ```
+
+---
+
+## 🤖 Model & Metodologi
+
+### IndoBERT Sentiment Analysis
+
+```
+Input Text
+    ↓
+Tokenization (IndoBERT Tokenizer)
+    ↓
+Embedding Layer (768 dimensions)
+    ↓
+12 Transformer Encoder Layers
+    ↓
+Classification Head (3 classes)
+    ↓
+Softmax Activation
+    ↓
+Output: [P(Positif), P(Negatif), P(Netral)]
+```
+
+**Model Details:**
+- Base Model: `w11wo/indonesian-roberta-base-sentiment-classifier`
+- Architecture: IndoBERT (Indonesian RoBERTa)
+- Parameters: 125M
+- Max Sequence Length: 512 tokens
+- Accuracy: **85-92%** (vs Lexicon-based: 60-70%)
 
 ---
 
@@ -230,159 +238,178 @@ Dashboard akan terbuka di: `http://localhost:8501`
 ### Sumber Data
 
 1. **Portal Berita Online**
-   - Detik, Kompas, Tribun, CNN Indonesia, dll
+   - Total: 544 artikel
+   - Sumber: Detik, Kompas, Tribun, CNN Indonesia, dll
    - Periode: 6 bulan terakhir
-   - Fokus: Berita terkait naturalisasi Timnas
+   - Filter: Hanya berita Timnas Indonesia
 
 2. **YouTube Comments**
+   - Total: 3.166 komentar
    - Video tentang Timnas Indonesia
    - Sorted by: Relevance
    - Filter: Bahasa Indonesia only
 
-### Statistik Dataset (Target)
+### Proses Data
 
-| Metric | Target | Actual |
-|--------|--------|--------|
-| Total Data | 10,000+ | TBD |
-| Berita | 5,000+ | TBD |
-| YouTube Comments | 5,000+ | TBD |
-| Setelah Cleaning | 8,000+ | TBD |
-
-### Data Structure
-
-```python
-{
-    'title': str,              # Judul artikel/video
-    'content': str,            # Isi artikel/komentar
-    'source': str,             # Sumber data
-    'date': datetime,          # Tanggal publikasi
-    'sentiment': str,          # Positif/Negatif/Netral
-    'opinion': str,            # Setuju/Tidak Setuju/Netral
-    'confidence': float,       # Confidence score (0-1)
-    'processed_text': str      # Teks setelah preprocessing
-}
 ```
+Crawling → Cleaning → Preprocessing → Sentiment Analysis → Visualization
+```
+
+**Data Cleaning:**
+- Remove duplicates
+- Filter spam & irrelevant content
+- Validate text length (10-5000 characters)
+- Remove non-Indonesian content
+
+**Text Preprocessing:**
+- Case folding
+- Remove URLs, mentions, hashtags
+- Remove special characters & numbers
+- Stopword removal (Sastrawi)
+- Stemming (Sastrawi)
 
 ---
 
-## 🤖 Model & Metodologi
+## 📈 Visualisasi Dashboard
 
-### IndoBERT Architecture
+### Interactive Dashboard Features
 
-```
-Input Text
-    │
-    ▼
-Tokenization (IndoBERT Tokenizer)
-    │
-    ▼
-Embedding Layer (768 dimensions)
-    │
-    ▼
-12 Transformer Encoder Layers
-    │
-    ▼
-Classification Head (3 classes)
-    │
-    ▼
-Softmax Activation
-    │
-    ▼
-Output: [P(Positif), P(Negatif), P(Netral)]
-```
+✅ **Real-time Filtering**
+- Filter by source, sentiment, date range
+- Dynamic chart updates
 
-### Model Details
+✅ **5 Tab Visualisasi:**
+1. 📊 Distribusi Opini (Pie Chart)
+2. 📈 Tren Waktu (Line Chart)
+3. ⚖️ Perbandingan Berita vs YouTube
+4. ☁️ Word Clouds (Positif & Negatif)
+5. 📋 Data Explorer (Search & Download)
 
-- **Base Model:** IndoBERT (Indonesian RoBERTa)
-- **Fine-tuned on:** Indonesian Sentiment Dataset
-- **Parameters:** 125M
-- **Max Sequence Length:** 512 tokens
-- **Output Classes:** 3 (Positif, Negatif, Netral)
+✅ **UI/UX Modern**
+- Tema Merah Putih Indonesia 🇮🇩
+- Responsive Design (Mobile & Desktop)
+- High Contrast Colors
+- Smooth Animations
 
-### Evaluation Metrics
+---
+
+## 🔬 Evaluasi Model
 
 | Metric | IndoBERT | Lexicon-Based |
 |--------|----------|---------------|
 | **Accuracy** | 88.5% | 65.2% |
-| **Precision (Avg)** | 87.3% | 62.8% |
-| **Recall (Avg)** | 86.9% | 64.1% |
-| **F1-Score (Avg)** | 87.1% | 63.4% |
+| **Precision** | 87.3% | 62.8% |
+| **Recall** | 86.9% | 64.1% |
+| **F1-Score** | 87.1% | 63.4% |
 
 ---
 
-## 📈 Hasil & Visualisasi
+## 📝 Dependencies
 
-### Sample Insights
+```
+# Web Crawling
+GoogleNews==1.6.13
+requests==2.31.0
 
-**Distribusi Sentimen:**
-- ✅ Setuju (Mendukung): 48.2%
-- ❌ Tidak Setuju (Menolak): 37.5%
-- 😐 Netral: 14.3%
+# YouTube
+google-api-python-client
 
-**Perbandingan Platform:**
-- Portal Berita: 52% Setuju
-- YouTube Comments: 44% Setuju
+# NLP & Text Processing
+Sastrawi==1.0.1
+nltk==3.8.1
 
-### Visualisasi Utama
+# Data Science
+pandas==2.1.4
+numpy==1.26.2
+scikit-learn==1.3.2
 
-1. **Pie Chart**: Proporsi opini publik
-2. **Line Chart**: Tren sentimen over time
-3. **Bar Chart**: Perbandingan by source
-4. **Word Cloud**: Kata-kata populer positif/negatif
-5. **Heatmap**: Sentimen by date & source
+# Deep Learning
+torch>=2.0.0
+transformers>=4.30.0
 
-### Screenshots
+# Visualization
+streamlit>=1.28.0
+plotly>=5.17.0
+matplotlib==3.8.2
+seaborn==0.13.0
+wordcloud==1.9.3
 
-<details>
-<summary>📸 Klik untuk melihat screenshots</summary>
-
-![Dashboard Overview](images/dashboard-overview.png)
-![Sentiment Trend](images/sentiment-trend.png)
-![Word Clouds](images/wordclouds.png)
-
-</details>
+# Database (Optional)
+mysql-connector-python==8.0.33
+```
 
 ---
 
-## 📁 Struktur Proyek
+## 🎯 Use Cases
 
+1. **Stakeholder PSSI**
+   - Memahami opini publik terhadap kebijakan naturalisasi
+   - Evaluasi strategi komunikasi
+   - Prediksi reaksi untuk kebijakan baru
+
+2. **Media & Jurnalis**
+   - Analisis tren berita sepak bola
+   - Memahami topik yang viral
+   - Identifikasi narasi dominan
+
+3. **Researcher**
+   - Studi kasus NLP untuk Bahasa Indonesia
+   - Benchmark IndoBERT performance
+   - Social media sentiment analysis
+
+4. **Data Scientist**
+   - Template project sentiment analysis
+   - Multi-source data integration
+   - Interactive dashboard development
+
+---
+
+## 🔮 Future Development
+
+- [ ] Tambah sumber data: Twitter/X, Instagram, Facebook
+- [ ] Real-time streaming analysis
+- [ ] Aspect-based sentiment analysis
+- [ ] Emotion detection (anger, joy, sad, etc.)
+- [ ] Multi-language support
+- [ ] Mobile app version
+- [ ] API endpoint untuk integrasi
+
+---
+
+## 📄 Output Files
+
+### Data Files (CSV)
 ```
-sentiment-timnas-indonesia/
-│
-├── 📄 main.py                      # Main execution script
-├── 📄 app.py                       # Streamlit dashboard
-├── 📄 config.py                    # Configuration & settings
-├── 📄 requirements.txt             # Python dependencies
-├── 📄 README.md                    # Project documentation
-├── 📄 database_schema.sql          # MySQL database schema
-│
-├── 📂 modules/
-│   ├── 📄 news_crawler.py          # Google News crawler
-│   ├── 📄 youtube_scraper.py       # YouTube comment scraper
-│   ├── 📄 text_preprocessor.py     # Text cleaning & processing
-│   ├── 📄 indobert_analyzer.py     # IndoBERT sentiment analyzer
-│   ├── 📄 lexicon_analyzer.py      # Fallback lexicon analyzer
-│   ├── 📄 data_cleaner.py          # Data quality control
-│   ├── 📄 visualizer.py            # Chart generation
-│   ├── 📄 comparison_analyzer.py   # Platform comparison
-│   └── 📄 mysql_integration.py     # Database operations
-│
-├── 📂 data/
-│   ├── 📄 raw_data.csv             # Raw crawled data
-│   ├── 📄 processed_data.csv       # Cleaned & analyzed data
-│   ├── 📄 raw_news.csv             # News articles only
-│   └── 📄 raw_youtube.csv          # YouTube comments only
-│
-├── 📂 output/
-│   ├── 🖼️ opinion_distribution.png
-│   ├── 🖼️ sentiment_distribution.png
-│   ├── 🖼️ sentiment_trend.png
-│   ├── 🖼️ comparison_bar_chart.png
-│   ├── 🖼️ wordcloud_positif.png
-│   └── 🖼️ wordcloud_negatif.png
-│
-└── 📂 models/
-    └── (IndoBERT models auto-downloaded di ~/.cache/huggingface/)
+data/
+├── raw_data.csv              # Gabungan semua data mentah
+├── raw_news.csv              # Berita saja
+├── raw_youtube.csv           # YouTube saja
+├── processed_data.csv        # Data sudah dianalisis
+└── comparison_summary.csv    # Ringkasan perbandingan
 ```
+
+### Visualization Files (PNG)
+```
+output/
+├── opinion_distribution.png      # PIE: Setuju vs Tidak Setuju
+├── sentiment_distribution.png    # BAR: Distribusi sentimen
+├── sentiment_by_source.png       # BAR: Sentimen per media
+├── sentiment_trend.png           # LINE: Tren over time
+├── comparison_bar_chart.png      # BAR: Perbandingan jumlah
+├── comparison_pie_charts.png     # PIE: 3 pie side-by-side
+├── comparison_percentage.png     # STACKED BAR: Persentase
+├── wordcloud_positif.png         # WORDCLOUD: Kata positif
+└── wordcloud_negatif.png         # WORDCLOUD: Kata negatif
+```
+
+---
+
+<div align="center">
+
+**⚽ Made with ❤️ for Indonesian Football ⚽**
+
+*Proyek Big Data Analytics - Institut Teknologi Sepuluh Nopember (ITS)*
+
+*© 2024 Gilang Gallan Indrana - 5024231030*
+
 </div>
-
